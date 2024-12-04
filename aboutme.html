@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ABOUTME </title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+      body {
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      background-image: url("ASSET2/IMAGE/background.jpg");
+        /* The image used for background */
+        background-position: center;
+        /* Center the image */
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        /* Resize the background image to cover the entire container */
+      }
+  }
+  @keyframes fadeInAnimation {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  /* Customize the navigation bar styles */
+.navbar {
+    background-color: #000000;
+    overflow: hidden;
+  }
+  
+  .navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #f2f2f2;
+    padding: 10px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Customize the logo style */
+  .logo {
+    float: left;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f2f2f2;
+    text-decoration: none;
+  }
+  
+  /* Align remaining items to the right */
+  .navbar-right {
+    float: right;
+  }
+  
+  /* CSS styles for the footer */
+  .footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  footer {
+    background-color: #000000;
+    padding: 20px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+  
+  .footer-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .footer-description {
+    text-align: center;
+    text-shadow: 3px 5px 10px brown;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-links li {
+    margin-right: 10px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .footer-links a:hover {
+    color: #9DE3F6;
+  }
+<!-- CSS FOR TEAM-- > .image-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-container .image {
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container:hover .image {
+    transform: scale(1.1);
+  }
+  
+  .image-container .text {
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .image-container:hover .text {
+    max-height: 200px; /* Adjust this value to control the height of the sliding text */
+  }
+  
+  /* CSS styles for the Gallery */
+  
+  div.scroll-container {
+    background-color: transparent;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+  }
+  /* Slideshow container */
+  .slideshow-container {
+    position: relative;
+    background: transparent;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #2c0733;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(37, 11, 79, 0.8);
+    color: rgb(184, 131, 189);
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 10px;
+    background: #e3bdda;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active,
+  .dot:hover {
+    background-color: #93338c;
+  }
+  
+  /* Add a blue color to the author */
+  .author {
+    color: rgba(65, 11, 88, 0.649);
+  }
+  /* CSS styles for the best sellers */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  img {
+      border: 3px solid #13293D;
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    th, td {
+  border-style:solid;
+  border-color: #5885AF;
+} 
+img.active {
+      border-color: #0000FF; /* Green border when active */
+    }
+</style> 
+<!--END OF STYLE-->
+  </head>
+  <body>
+    <href="#Top"></href>
+    <div class="navbar">
+      <a href="index.html" target="_self" class="logo">
+        <img
+          src="ASSET/LOGO/home.png"
+          width="60px"
+          hspace="10px"
+          vspace="10px"
+        />
+      </a>
+      <font face="Times New Roman">
+      <div class="navbar-right">
+        <div class="dropdown">
+          <button class="dropbtn"> <b>About Me</b> </button>
+          <div class="dropdown-content">
+            <font face="Times New Roman">
+            <a href="aboutme.html" target="_self">Myself</a>
+            <a href="education.html" target="_self">Education</a>
+           </font>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"><b>Possession</b></button>
+          <div class="dropdown-content">
+            <font face="Times New Roman">
+            <a href="resume.html" target="_self">Resume</a>
+            <a href="business.html" target="_self">Business</a>
+            </font>
+        </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn"> <a href="gallery.html" target="_self"> <b>Gallery</b> </a> </button>
+            </font>
+          </div>
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--CONTENT-->
+<br><br>
+<h2> <font face="Monospace" color="000000" size="10px"> <center><b>M E</b></center></font></h2>
+<hr style="border: 1px dashed black;">
+<br><br>
+<img src="ASSET2/IMAGE/baby.jpg"max-width="100%" height="200px">
+<img src="ASSET2/IMAGE/kid.jpg" max-width="100%" height="200px">
+<img src="ASSET2/IMAGE/kid4.jpg" max-width="100%" height="200px">
+<img src="ASSET2/IMAGE/kid2.jpg" max-width="100%" height="200px">
+<img src="ASSET2/IMAGE/adult.jpg"max-width="100%" height="200px"">
+<br><br><br>
+<center>
+<table border="2" width="40%" cellpadding="10px">
+  <td>
+  <center>
+    <font face="Monospace" color="000000" size="4px"><b>A little bit information about me</b></font>
+  </center> 
+  </td>
+ </tr>
+ </table>
+<center>
+ <br><br>
+ <table style="width:40%">
+    <tr>
+      <th><font face="Times New Roman" size="3px">Name</font></th><td><font face="Times New Roman" size="3px">Intan Nik Nurjannah Binti Mat Darus</font></td> 
+    </tr>
+    <tr>
+      <th><font face="Times New Roman" size="3px">Age</font></th>
+      <td><font face="Times New Roman" size="3px">21</font></td> 
+    </tr>
+    <tr>
+      <th><font face="Times New Roman" size="3px">Birthdate</font></th>
+      <td><font face="Times New Roman" size="3px">08/04/2003</font></td>
+    </tr> 
+    </tr>
+    <tr>
+      <th><font face="Times New Roman" size="3px">Likes</font></th>
+      <td><font face="Times New Roman" size="3px">Singing, Eating, Zamani Slam, Crochet</font></td>
+  </table>
+  </center>
+  <br><br><br>
+  <center>
+  <table border="2" width="40%" cellpadding="10px">
+    <td>
+    <center>
+        <font face="Monospace" color="000000" size="4px"><b>My Favourite Singers</b></font>
+    </center> 
+    </td>
+   </tr>
+   </table>
+   <h2> <font face="Times New Roman" size="5px">Click images & Wait a few seconds to hear my favourite songs!</font></h2>
+ <!-- First Image and Audio -->
+ <img id="image1" src="ASSET2/IMAGE/zamani.jpg"max-width="100%" height="400px" alt="Song 1">
+ <audio id="audio1" src="ASSET/AUDIO/slam.mp3"></audio>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <!-- Second Image and Audio -->
+ <img id="image2" src="ASSET2/IMAGE/siti.jpg"max-width="100%" height="400px" alt="Song 2">
+ <audio id="audio2" src="ASSET/AUDIO/siti.mp3"></audio>
+<br><br>
+<marquee direction="right" scrollamount="10"> <font face="Ink Free" size="5px"><b>Zamani Slam </b></font></marquee>
+<marquee direction="left" scrollamount="10"> <font face="Ink Free" size="5px"><b>Siti Nurhaliza</b></font></marquee>
+<br><br>
+<hr style="border: 1px dashed black;">
+<!--CONTENT-->
+<br><br>
+<h2> <font face="Monospace" color="000000" size="10px"> <center><b>H O B B I E S</b></center></font></h2>
+<hr style="border: 1px dashed black;">
+<blockquote> <font face="Times New Roman" size="4px"> <i>"Attending concerts is my way of combining my love for music with the thrill of a shared experience.
+   It’s where I feel most connected to my favorite artists and to others who share the same passion."</i></font> </blockquote>
+   <center>
+       <marquee scrollamount=10>
+         <font face="Monospace" color="000000" size="5px"><b>All About Zamani ~</b></font>
+       </marquee>
+       </center> 
+            <center>
+              <br>
+            <table style="width:30%">
+              <tr>
+                <th><font face="Ink Free" size="+2">Zamani</th>
+            </table>
+            </center>
+            <br>
+            <center><br>
+              <center><br>
+                <img src="ASSET2/IMAGE/singer1.jpg"max-width="100%" height="300px">
+                <img src="ASSET2/IMAGE/singer2.jpg"max-width="100%" height="300px">
+                <img src="ASSET2/IMAGE/singer3.jpg"max-width="100%" height="300px">
+                <img src="ASSET2/IMAGE/singer4.jpg"max-width="100%" height="300px">
+                <img src="ASSET2/IMAGE/singer5.jpg"max-width="100%" height="300px">
+                </center>
+                <br><br>
+                <div style="margin-left: 30px; margin-right: 30px;"text-align: justify;">
+                <article> <p align="justify"> <font face="Times New Roman"> 
+                "My hobbies are all about <font face="Monospace"><i><b>Zamani</b></i></font>—listening to his timeless songs, watching his unforgettable performances, collecting his albums, and even revisiting old interviews to understand his journey. 
+                <br> Whether it's humming along to <i>Gerimis Mengundang</i> on a rainy day or sharing his music with others, every moment spent is a celebration of his artistry. Supporting his career, learning his lyrics by heart, and being part of the community that admires him feels like more than a hobby—it's a joy and a way of life."
+                </font></p>
+                </article>
+              </div>
+
+<script>
+    // Get references to the images and audio elements
+const images = [
+{ img: document.getElementById('image1'), audio: document.getElementById('audio1') },
+{ img: document.getElementById('image2'), audio: document.getElementById('audio2') }
+];
+
+// Function to stop all audio and remove active states
+function stopAllAudio() {
+images.forEach(({ img, audio }) => {
+audio.pause();
+audio.currentTime = 0; // Reset playback to the beginning
+img.classList.remove('active');
+});
+}
+
+// Add event listeners to each image
+images.forEach(({ img, audio }) => {
+img.addEventListener('click', () => {
+if (audio.paused) {
+  stopAllAudio(); // Stop other songs
+  audio.play(); // Play this song
+  img.classList.add('active'); // Add active visual
+} else {
+  audio.pause(); // Pause this song
+  img.classList.remove('active'); // Remove active visual
+}
+});
+});
+</script>
+     <!-- Footer -->
+     <footer>
+          <center> <a href="#Top" class="w3-button w3-light-grey">To the top</a></center>
+          <br>
+            <div class="footer-links">
+          <ul>
+            <li><a href="aboutme.html" target="_self"> <font face="Times New Roman"> Myself </font> </a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="education.html" target="_self"> <font face="Times New Roman"> Education </font></a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="resume.html" target="_self"> <font face="Times New Roman"> Resume </font></a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="business.html" target="_self"> <font face="Times New Roman"> Business </font></a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <li><a href="gallery.html" target="_self"> <font face="Times New Roman"> Gallery </font></a></li>
+          </ul>
+        </div>
+          <p align="middle"> <font face="Times New Roman" color="white"> <b> Inhnaa &copy; 2024 | All rights reserved </b></font></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+/* Default styles for all devices */
+body {
+  font-size: 16px;
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+body {
+  background-image: url("ASSET2/IMAGE/background.png");
+  /* The image used for background */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+}
+
+.container {
+  width: 100%;
+  height: 100vh; /* Default height for desktop */
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Media query for desktop devices */
+@media (min-width: 992px) {
+  .container {
+    height: auto; /* Adjust the height as per your requirement */
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 20px 190px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+  border: 3px solid black;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: #9de3f6;
+}
+ul {
+    list-style-type: square;
+    margin: 40;
+    padding: 0;
+  }
+  
+  li a {
+    display: block;
+    width: 100%;
+    background-color: #9DE3F6;
+    text-align: center;
+    padding: 10px 100px;
+    text decoration: none;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Garamond, New Times Roman, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #000000;
+    padding: 32px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+  }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 30%;
+    height: auto;
+    background: #DDDDDD;
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: right;
+    padding: 20px;
+    width: 70%;
+    background-color: transparent;
+    height: auto;
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  div.scroll-container {
+    background-color: #transparent;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+  }
+  
+  .intro { 
+    text-align: center; 
+    font-family: Arial;
+  }
+  
+  h2 { 
+    font-size: 36px;
+  }
+  
+  p { 
+    font-size: 14pt;
+  }
+  #gallery {
+     line-height:0;
+     -webkit-column-count:5; /* split it into 5 columns */
+     -webkit-column-gap:5px; /* give it a 5px gap between columns */
+     -moz-column-count:5;
+     -moz-column-gap:5px;
+     column-count:5;
+     column-gap:5px;
+  }
+  
+  #gallery img {
+     width: 100% !important;
+     height: auto !important;
+     margin-bottom:5px; /* to match column gap */
+     filter: grayscale(100%);
+     transition: filter 1s;
+  }
+  
+  #gallery img:hover {
+     filter:none;
+  }
+  
+  @media (max-width: 1200px) {
+     #gallery {
+      -moz-column-count:    4;
+      -webkit-column-count: 4;
+      column-count:         4;
+     }
+  }
+  
+  @media (max-width: 800px) {
+     #gallery {
+      -moz-column-count:    2;
+      -webkit-column-count: 2;
+      column-count:         2;
+     }
+  }
+  
+  @media (max-width: 400px) {
+     #gallery {
+      -moz-column-count:    1;
+      -webkit-column-count: 1;
+      column-count:         1;
+     }
+  }
+  
+  /* Style buttons */
+  .btn {
+    background-color: E57C23;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: E8AA42;
+  }
+ 
